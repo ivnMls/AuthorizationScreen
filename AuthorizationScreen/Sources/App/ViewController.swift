@@ -259,7 +259,15 @@ class ViewController: UIViewController {
     //MARK: - Setup
 
     private func setupHierarchy() {
-
+        view.addSubview(backgroundImage)
+        view.addSubview(labelLogin)
+        view.addSubview(stackView)
+        view.addSubview(secondStackView)
+//        view.addSubview(thirdStackView)
+        view.addSubview(labelFeedback)
+        view.addSubview(fourthStackView)
+        view.addSubview(fifthStackView)
+        view.addSubview(slash)
     }
 
     //MARK: - Actions
