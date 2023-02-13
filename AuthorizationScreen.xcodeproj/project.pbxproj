@@ -12,6 +12,7 @@
 		CE3899C9299AF29B008011BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3899C8299AF29B008011BE /* ViewController.swift */; };
 		CE3899CE299AF29F008011BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3899CD299AF29F008011BE /* Assets.xcassets */; };
 		CE3899D1299AF29F008011BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3899CF299AF29F008011BE /* LaunchScreen.storyboard */; };
+		CE3899DF299AF56D008011BE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE3899DE299AF56D008011BE /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3899DF299AF56D008011BE /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +122,9 @@
 			dependencies = (
 			);
 			name = AuthorizationScreen;
+			packageProductDependencies = (
+				CE3899DE299AF56D008011BE /* SnapKit */,
+			);
 			productName = AuthorizationScreen;
 			productReference = CE3899C1299AF29B008011BE /* AuthorizationScreen.app */;
 			productType = "com.apple.product-type.application";
@@ -148,6 +153,9 @@
 				Base,
 			);
 			mainGroup = CE3899B8299AF29B008011BE;
+			packageReferences = (
+				CE3899DD299AF56D008011BE /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = CE3899C2299AF29B008011BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -386,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE3899DD299AF56D008011BE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE3899DE299AF56D008011BE /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE3899DD299AF56D008011BE /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE3899B9299AF29B008011BE /* Project object */;
 }
