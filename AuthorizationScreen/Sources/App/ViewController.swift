@@ -38,8 +38,8 @@ class ViewController: UIViewController {
         textField.textColor = UIColor.lightGray
         textField.layer.cornerRadius = 20
         textField.backgroundColor = .white
-//        textField.setLeftIcon(image: (.init(named: "login") ?? .add))
-//        textField.setRightIcon(image: .checkmark)
+        textField.setLeftIcon(image: (.init(named: "login") ?? .add))
+        textField.setRightIcon(image: .checkmark)
         textField.layer.shadowColor = UIColor.black.cgColor //задаем цвет тени
         textField.layer.shadowOpacity = 0.2                 //задаем прозрачность тени
         textField.layer.shadowOffset = .zero                //отключаем смещение тени
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         textField.textColor = UIColor.lightGray
         textField.layer.cornerRadius = 20
         textField.backgroundColor = .white
-//        textField.setLeftIcon(image: .init(named: "lock") ?? .checkmark)
+        textField.setLeftIcon(image: .init(named: "lock") ?? .checkmark)
         textField.layer.shadowColor = UIColor.black.cgColor
         textField.layer.shadowOpacity = 0.2
         textField.layer.shadowOffset = .zero
@@ -251,11 +251,18 @@ class ViewController: UIViewController {
         return stack
     }()
 
+
+
     //MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupHierarchy()
+        setupLayout()
+
     }
+
+
 
     //MARK: - Setup
 
@@ -331,12 +338,12 @@ class ViewController: UIViewController {
 
     }
 
+
     //MARK: - Actions
 
     @objc private func buttonPressed() {
 
     }
-
 
 }
 
@@ -365,3 +372,6 @@ extension UITextField {
         rightViewMode = .always
     }
 }
+
+
+
