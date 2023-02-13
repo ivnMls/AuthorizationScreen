@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
@@ -268,6 +269,66 @@ class ViewController: UIViewController {
         view.addSubview(fourthStackView)
         view.addSubview(fifthStackView)
         view.addSubview(slash)
+    }
+
+    private func setupLayout() {
+        backgroundImage.snp.makeConstraints { make in
+            make.leading.equalTo(view.safeAreaInsets.left).offset(0)
+            make.trailing.equalTo(view.safeAreaInsets.right).offset(0)
+            make.top.equalTo(view.safeAreaInsets.top).offset(0)
+            make.bottom.equalTo(view.safeAreaInsets.bottom).offset(0)
+        }
+
+        labelLogin.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(80)
+            make.left.equalTo(view.snp.left).offset(22)
+            make.right.equalTo(view.snp.right).offset(-22)
+        }
+
+        stackView.snp.makeConstraints { make in
+            make.width.equalTo(300)
+            make.height.equalTo(110)
+            make.centerX.equalTo(view.snp.centerX)
+            make.top.equalTo(labelLogin.snp.bottom).offset(50)
+        }
+
+        secondStackView.snp.makeConstraints { make in
+            make.width.equalTo(300)
+            make.height.equalTo(100)
+            make.centerX.equalTo(view.snp.centerX)
+            make.top.equalTo(stackView.snp.bottom).offset(40)
+        }
+
+
+
+        labelFeedback.snp.makeConstraints { make in
+            make.centerX.equalTo(view)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-200)
+        }
+
+        slash.snp.makeConstraints { make in
+            make.centerX.equalTo(view)
+            make.width.equalTo(300)
+            make.height.equalTo(0.5)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-206)
+        }
+
+
+        fourthStackView.snp.makeConstraints { make in
+            make.centerX.equalTo(view)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-120)
+            make.height.equalTo(50)
+            make.width.equalTo(300)
+        }
+
+        fifthStackView.snp.makeConstraints { make in
+            make.centerX.equalTo(view)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-50)
+        }
+
+
+
+
     }
 
     //MARK: - Actions
