@@ -279,3 +279,28 @@ class ViewController: UIViewController {
 
 }
 
+extension UITextField {
+    func setLeftIcon(image: UIImage) {
+        let iconView = UIImageView(frame: CGRect(x: 20, y: 5, width: 20, height: 20))
+        iconView.image = image
+        let iconContainerView: UIView = UIView(frame: CGRect(x: 20, y: 0, width: 5, height: 30))
+        iconContainerView.addSubview(iconView)
+        leftView = iconContainerView
+        leftViewMode = .always
+    }
+
+}
+
+//MARK: Удобные расширения чтобы добавлять картинки (если менять width и UIView, то можно двигать вводимый текст за счет увеличения самого эдемента, а с помощью Х координаты у UIImageView можно двигать внутри контейнера)
+
+extension UITextField {
+    func setRightIcon(image: UIImage) {
+        let iconView = UIImageView(frame: CGRect(x: -35, y: 2, width: 25, height: 23))
+        iconView.tintColor = .systemGreen
+        iconView.image = image
+        let iconContainerView: UIView = UIView(frame: CGRect(x: 20, y: 0, width: 0, height: 30))
+        iconContainerView.addSubview(iconView)
+        rightView = iconContainerView
+        rightViewMode = .always
+    }
+}
